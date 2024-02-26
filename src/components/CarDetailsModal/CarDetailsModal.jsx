@@ -1,7 +1,10 @@
 import Modal from 'react-modal';
-
+import { IoCloseOutline } from "react-icons/io5";
 const customStyles = {
-  content: {
+  overlay: {
+      backgroundColor: 'rgba(18, 20, 23, 0.5)'
+    },
+     content: {
     top: '50%',
     left: '50%',
     right: 'auto',
@@ -9,7 +12,10 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     padding: '0',
-  },
+    overlay: {
+    backgroundColor: 'black'
+  }
+  } 
 };
 
 Modal.setAppElement('#root');
@@ -40,6 +46,8 @@ export const CarDetailsModal = ({ car, isModalOpen, closeModal }) => {
       width="498"
     >
       <div>
+        <button type='button' onClick={closeModal}><IoCloseOutline width={24} height={24}/>
+</button>
         <div>
           <img src={img} alt={model} width={461} height={248} />
           <div>

@@ -1,10 +1,13 @@
 import { CarsList } from 'components/CarsList/CarsList';
+import { CarSearchForm } from 'components/CarsSearchForm/CarSearchForm';
 
 export default function Catalog() {
+  
   return (
     <div>
-      <h1>Search form</h1>
+      <CarSearchForm/>
       <CarsList />
+      <button>Load more</button>
     </div>
   );
 }
